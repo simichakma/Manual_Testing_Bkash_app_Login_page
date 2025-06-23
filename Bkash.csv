@@ -1,0 +1,52 @@
+,,              TC Start  Date,19.05.2025,  TC Executation Start date,,,,,
+,,,,,,,,,
+Product Name:,   Bkash  App,,,,,,,,
+,,                  TC End Date,20.05.2025,,,,,,
+,,,,  TC Executation End date,,,,,
+,,,,,,,,,
+,,                 TC Developed By:,Simi  Chakma,,,,,,
+,,,,,,,,,
+Module Name:,          Login,,,Test  Case Review by,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Developer by,XXXXXX,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+TC_ID,Feature to be Tested,Test Case Description,Precondition,Test Data,Test Steps,Postcondition,Expected Result,Actual Result,Status
+,,,,,,,,,
+TC001,  Login,User login with carrect number, App installed,      N/A,"1. Open app , 2. Enter valid number(017xxxxxxxxx), 3. valid number OTP(08XXX), 4. valid number PIN",User logged in,User is take to dashboard,As Expected,   Pass
+,,,,,"(10XXX) digits , 5. user name(Shimu Haque)",,,,
+TC002,  Login,New user login with number,App installed,       N/A,"1. Open app , 2. Enter valid number(0155XXXXXXX) , 3. then scaning NID card , 4. take a picture,",New User create a new account,Shown  the new user dashboard,As Expected,  Pass
+,,,,,5. new user informations.,,,,
+TC003, Login,Biometric Login,Enable device biomatrics,       N/A,         Fingerprint scan, Login via biometrics, Fingerprint Scan, As Expected,  Pass
+,,,,,,,,,
+TC004,User login with invalid PIN,User enter the wrong PIN ,App installed,      N/A,"1. Open app , 2. Enter valid number(017XXXXXXXX) , 3. Enter the wrong PIN (67XXX) , 4. logged in",User remains on login,Shown the error PIN, As Expected, Pass
+,,,, ,,,,,
+TC005,Empty mobile number,Login without number,App installed,     N/A,"1. Open app , 2. leave the number(__________) , 3. Tap Login",User stays on login,Error the mobile number,As Expected,  Pass
+,,,,,,,,,
+TC006,Invalid number format,Enter letters in number field ,App installed,    N/A,"1. Open app , 2. Enter ""abcd"" 3. Enter PIN , 4. Login",User stays on login,Error the invalid number format,As Expected, Pass
+,,,,,,,,,
+TC007,Sort mobile number (10 digits),Less than 11 digits,App installed,     N/A,"1. Open app , 2. Enter (0123456789) , 3. Enter PIN (10XXX) , 5. Login",User stays on login,Error invalid number,As Expected, Pass
+,,,,,,,,,
+TC008,Long mobile number (12 digits),More than 11 digits,App installed,    N/A,"1. Open app , 2. Enter (01234567891) , 3. Enter PIN (10XXX) , 5. Login",User stays on login,Error invalid number,As Expected,  Pass
+,,,,,,,,,
+TC009,Logged in blocked number,Blocked number attempt,App installed,   N/A,"1. Enter the blocked number (015537744113) , 2. Enter valid PIN , 3. Login",User denied access,"Message : ""Account blocked""",As Expected, Pass
+,,,,,,,,,
+TC010,   Login,PIN with special characters,App installed,   N/A,"1. Enter vaild number (017XXXXXXXXX) , 2. Enter PIN (!@#459).",Login Fails,Enter invalid PIN format,As Expected, Pass
+,,,,,,,,,
+TC011,  Login,Network disconnected,App installed,  N/A,1. Error No network,Login not possible,Login not possible,As Expected,  Pass
+,,,,,,,,,
+TC012,Account Lock,Maxmum failed attempts(5/6 times),Valid mobile,  N/A,1. Enter wrong PIN (5/6 times),Lockout in place,Account temporarily locked,As Expected, Pass
+,,,,,,,,,
+TC013,Forgot PIN navigataion,Forgot PIN redirects properly,App installed,  N/A,"1. Enter the number(017XXXXXXXXX) , 2. send to phone OTP(067XX) , 3. previous PIN(XXXXX) and",User can recover,Redirects to recovery screen ,As Expected, Pass
+,,,,,new create PIN(XXXXX),,,,
+TC014,Language,Swich the language (Eng/Bng),App installed, N/A,"1. Go to the setting bangla , 2. click the bottom", Text update, Login scrren bangla, As Expected, Pass
+,,,,,,,,,
+TC015,QR code scanner,Scan a valid merchant QR code,"User logged in , camera allowed", N/A, 1. Top scan QR scan code,Merchant info loaded,Merchant details appear in scanner,As Expected,Pass
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
